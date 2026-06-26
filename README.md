@@ -29,7 +29,7 @@
 
 A **fully offline, zero-cost** voice assistant that runs entirely on your local machine. No cloud APIs for voice processing, no subscriptions, no data leaving your PC.
 
-Say **"Hey Jimmy"** (male voice) or **"Hey Sammy"** (female voice) and they get to work — opening apps, controlling volume, searching the web, and even **building entire software projects** using the Google Antigravity SDK.
+Say **"Hey Jimmy"** (male voice) or **"Hey Sammy"** (female voice) and they get to work - opening apps, controlling volume, searching the web, and even **building entire software projects** using the Google Antigravity SDK.
 
 ---
 
@@ -37,7 +37,7 @@ Say **"Hey Jimmy"** (male voice) or **"Hey Sammy"** (female voice) and they get 
 
 | Category | What it does |
 | :--- | :--- |
-| **Dual Personas** | Two wake words with distinct voices — switch seamlessly mid-session |
+| **Dual Personas** | Two wake words with distinct voices - switch seamlessly mid-session |
 | **AI Code Generation** | Say *"build a python script"* and an AI agent writes the code for you |
 | **App Control** | Open/close Spotify, Brave browser, Antigravity IDE by voice |
 | **Music** | Search and play songs on Spotify |
@@ -46,7 +46,7 @@ Say **"Hey Jimmy"** (male voice) or **"Hey Sammy"** (female voice) and they get 
 | **Screenshots** | Capture your screen with a voice command |
 | **Timers & Reminders** | Set countdown timers or named reminders |
 | **Power Control** | Shutdown or restart your laptop by voice |
-| **100% Offline Voice** | Speech recognition and TTS run locally — no internet needed |
+| **100% Offline Voice** | Speech recognition and TTS run locally - no internet needed |
 | **GPU Accelerated** | CUDA support for NVIDIA GPUs with automatic CPU fallback |
 
 ---
@@ -87,26 +87,22 @@ GOOGLE_API_KEY=your_gemini_api_key_here
 
 ## How It Works
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│   🎤  Microphone continuously captures audio            │
-│    ↓                                                    │
-│   🔍  Faster-Whisper transcribes speech locally          │
-│    ↓                                                    │
-│   🗣️  "Hey Jimmy" or "Hey Sammy" detected?              │
-│    ↓ YES                                                │
-│   ✅  Wake actions fire:                                 │
-│       • Brave browser launches (if not running)         │
-│       • Welcome greeting spoken                         │
-│    ↓                                                    │
-│   👂  Listens for voice commands (60s window)            │
-│       • "Build a python script" → AI agent spawns       │
-│       • "Play Shape of You" → opens in Spotify          │
-│       • "Search for python tutorials" → Brave Search    │
-│       • "Thank you" / "Goodbye" → back to sleep         │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+```text
+🎤  Microphone continuously captures audio
+ ↓
+🔍  Faster-Whisper transcribes speech locally
+ ↓
+🗣️  "Hey Jimmy" or "Hey Sammy" detected?
+ ↓ YES
+✅  Wake actions fire:
+    • Brave browser launches (if not running)
+    • Welcome greeting spoken
+ ↓
+👂  Listens for voice commands (60s window)
+    • "Build a python script" → AI agent spawns
+    • "Play Shape of You" → opens in Spotify
+    • "Search for python tutorials" → Brave Search
+    • "Thank you" / "Goodbye" → back to sleep
 ```
 
 ---
@@ -186,7 +182,7 @@ After saying **"Hey Jimmy"** or **"Hey Sammy"**, a 60-second command window open
 | Say the other wake word mid-session | Switches persona and voice |
 
 > [!NOTE]
-> You can combine wake word + command in one phrase: **"Hey Jimmy, open Brave"** — it handles it in a single pass.
+> You can combine wake word + command in one phrase: **"Hey Jimmy, open Brave"** - it handles it in a single pass.
 
 ---
 
@@ -225,7 +221,7 @@ COMMAND_LISTEN_TIMEOUT_S = 60.0  # how long to listen after wake
 | Model | Size | Speed | Accuracy | Best for |
 | :--- | :--- | :--- | :--- | :--- |
 | `tiny` | ~75 MB | ⚡⚡⚡ | ★★☆☆ | Low-end hardware, fastest response |
-| `base` | ~150 MB | ⚡⚡ | ★★★☆ | **Recommended** — good balance |
+| `base` | ~150 MB | ⚡⚡ | ★★★☆ | **Recommended** - good balance |
 | `small` | ~500 MB | ⚡ | ★★★★ | Higher accuracy, needs more RAM |
 | `medium` | ~1.5 GB | 🐢 | ★★★★★ | Best accuracy, needs GPU |
 
@@ -235,7 +231,7 @@ COMMAND_LISTEN_TIMEOUT_S = 60.0  # how long to listen after wake
 
 ```
 jimmy-assistant/
-├── jimmy.py              # Main assistant — voice loop, commands, wake detection
+├── jimmy.py              # Main assistant - voice loop, commands, wake detection
 ├── antigravity_bridge.py  # Spawns Antigravity SDK agents for code generation
 ├── requirements.txt       # Python dependencies
 ├── .env                   # Gemini API key (optional, for AI features)
@@ -266,14 +262,14 @@ jimmy-assistant/
 <summary><strong>🔇 Jimmy doesn't hear me</strong></summary>
 
 - Make sure your microphone is set as the **default recording device** in Windows Sound settings.
-- Check the console — if `rms` values are very low, your mic gain may be too quiet.
+- Check the console - if `rms` values are very low, your mic gain may be too quiet.
 
 </details>
 
 <details>
 <summary><strong>⚠️ CUDA errors on startup</strong></summary>
 
-- Jimmy automatically falls back to CPU if CUDA fails — no action needed.
+- Jimmy automatically falls back to CPU if CUDA fails - no action needed.
 - To force CPU mode, set `WHISPER_DEVICE = "cpu"` in `jimmy.py`.
 
 </details>
@@ -282,7 +278,7 @@ jimmy-assistant/
 <summary><strong>🗣️ Wrong voice or robotic speech</strong></summary>
 
 - `pyttsx3` uses Windows SAPI voices. Install additional voices via: **Settings → Time & Language → Speech → Manage voices**.
-- The voice is determined by which wake word you use — "Hey Jimmy" uses David, "Hey Sammy" uses Zira.
+- The voice is determined by which wake word you use - "Hey Jimmy" uses David, "Hey Sammy" uses Zira.
 
 </details>
 
@@ -316,5 +312,5 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 <p align="center">
-  <sub>Built with ❤️ and zero API costs</sub>
+  <sub>Built with ❤️ and Gemini 2.5 Flash</sub>
 </p>
