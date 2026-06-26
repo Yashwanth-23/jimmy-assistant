@@ -1,0 +1,29 @@
+# Environment & API keys
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Generated output
+screenshots/
+projects/
+
+# Temp
+*.tmp
