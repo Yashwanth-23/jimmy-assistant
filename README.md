@@ -312,5 +312,5 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 <p align="center">
-  <sub>Built with ❤️ and Gemini 2.5 Flash</sub>
+  <sub>Built with ❤️ | Meet Jimmy & Sammy: The ones who always listen to you, but never b*tch about you.</sub>
 </p>
